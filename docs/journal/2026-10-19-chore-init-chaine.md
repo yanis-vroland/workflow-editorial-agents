@@ -24,6 +24,7 @@ Branche `chore/init-chaine`.
 ### Corrections et limites
 
 - Écart dans le README du template : la procédure « Use this template » laisse ADR-002 à 005, `docs/demo/`, `docs/guide-adoption.md` et `renovate.json`, qu'`init.sh` ne copie pas. À remonter en issue dans `agentic-dev-workflow`, avec l'accord de Yanis.
+- **Défaut du template** : l'étape 3 de la procédure « Nouveau projet » (vider le journal du template) est refusée par `verifier-journal.sh`, qui interdit de supprimer un journal déjà mergé. Le job CI « Journal » de cette PR sera donc rouge. Sans ruleset sur `main`, la PR reste mergeable ; le correctif (exception pour le premier nettoyage, ou procédure qui garde ces journaux) est à remonter en issue dans `agentic-dev-workflow`, avec l'accord de Yanis.
 - `.claude/quality.json` vide : pas encore de code, les hooks de lint et de tests sont inactifs.
 - Configuration GitHub non faite : application Claude, secret `CLAUDE_CODE_OAUTH_TOKEN`, ruleset sur `main`, label `agent-corrigé`. Tant qu'elle manque, la revue IA de cette PR échouera.
 
