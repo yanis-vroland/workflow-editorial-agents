@@ -4,7 +4,13 @@ Contexte projet pour l'agent de code. Les sections marquées « À ADAPTER » so
 
 ## Projet
 
-À ADAPTER : une phrase sur ce que fait le projet et pour qui.
+Une équipe d'agents IA (application TypeScript) qui prépare chaque semaine un post LinkedIn pour la page de Vroland & Almeida, studio freelance de développement et de design : veille sur l'actualité et sur les dépôts de Yanis, texte et médias aux couleurs du studio, destinés aux prospects. Yanis valide et publie à la main ; les posts publiés s'affichent sur vrolandalmeida.com.
+
+Règles propres au projet :
+- **Jamais de publication automatique** : l'outil produit un brouillon (texte et médias), l'humain publie.
+- **Rien d'inventé** : aucun chiffre, témoignage ou cas client fictif ; chaque affirmation d'un post renvoie à une source (article, commit, ADR, PR).
+- **Aucune donnée client** : jamais de code, de nom ni de donnée de Misyl, Kozykod ou BOXBOXBOX, ni dans le code, ni dans les prompts, ni dans les posts.
+- **La charte graphique appartient à Rachel Jorge de Almeida** : les gabarits médias l'appliquent, ils ne la modifient pas.
 
 ## Stack et commandes
 
