@@ -4,13 +4,14 @@ Contexte projet pour l'agent de code. Les sections marquées « À ADAPTER » so
 
 ## Projet
 
-Une équipe d'agents IA (application TypeScript) qui prépare chaque semaine un post LinkedIn pour la page de Vroland & Almeida, studio freelance de développement et de design : veille sur l'actualité et sur les dépôts de Yanis, texte et médias aux couleurs du studio, destinés aux prospects. Yanis valide et publie à la main ; les posts publiés s'affichent sur vrolandalmeida.com.
+Une équipe d'agents IA (application TypeScript, lancée en local) qui prépare un post LinkedIn pour une marque : veille sur l'actualité et sur des dépôts de code publics, texte et visuel aux couleurs de la marque. L'éditeur valide et publie à la main ; un export JSON permet au site de la marque d'afficher les posts publiés. Le détail est dans le [cahier des charges](docs/cahier-des-charges-fonctionnel.md).
 
 Règles propres au projet :
+- **Outil générique, dépôt public** : tout ce qui est propre à une marque (nom, ton, charte, logos, sources, noms exclus) vit dans un profil local non versionné (`profiles/*.local.yaml`). Le dépôt ne contient qu'un profil d'exemple fictif. Aucune donnée de marque réelle dans le code, les gabarits, les prompts, les tests, les docs, les commits ou les PR.
 - **Jamais de publication automatique** : l'outil produit un brouillon (texte et médias), l'humain publie.
 - **Rien d'inventé** : aucun chiffre, témoignage ou cas client fictif ; chaque affirmation d'un post renvoie à une source (article, commit, ADR, PR).
 - **Aucune donnée client** : jamais de code, de nom ni de donnée d'un client réel (liste gardée hors du dépôt), ni dans le code, ni dans les prompts, ni dans les posts.
-- **La charte graphique appartient à Rachel Jorge de Almeida** : les gabarits médias l'appliquent, ils ne la modifient pas.
+- **La charte graphique appartient à son propriétaire** : les gabarits l'appliquent, ils ne la modifient pas.
 
 ## Stack et commandes
 
