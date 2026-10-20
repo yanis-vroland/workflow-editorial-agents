@@ -8,7 +8,7 @@ Il est mis à jour dans la PR qui change ce qu'il décrit : modèle de données,
 
 ## Vue d'ensemble
 
-Une application TypeScript lancée sur le poste de l'éditeur. Une interface web locale déclenche une préparation ; un orchestrateur enchaîne les six agents, qui appellent un modèle de langage et des outils (lecture RSS, API GitHub, rendu de gabarit). Les posts sont stockés localement ; l'export JSON est le seul contrat vers l'extérieur.
+Une application TypeScript lancée sur le poste de l'éditeur. Une interface web locale déclenche une préparation à la demande ; un orchestrateur enchaîne les six agents, qui appellent un modèle de langage et des outils (lecture RSS, API GitHub, rendu de gabarit). Les posts sont stockés localement et forment l'historique, que lit le Stratège pour varier les types de post. L'export JSON est le seul contrat vers l'extérieur. Les types de post ne sont pas des agents distincts : ce sont des fiches du profil (sources, structure, gabarit) que le Stratège choisit et que le Rédacteur et le Directeur média appliquent. En phase 2, un panel de personas et un agent de synthèse s'ajoutent après le Critique (F14).
 
 ```mermaid
 flowchart LR
@@ -18,6 +18,7 @@ flowchart LR
   scout -->|RSS| web[(Flux RSS du profil)]
   archivist -->|API GitHub| gh[(Dépôts publics du profil)]
   orch --> strategist[Stratège] --> writer[Rédacteur]
+  store -->|historique| strategist
   writer <--> critic[Critique]
   orch --> media[Directeur média] --> render[Rendu des gabarits<br/>ADR-003]
   api --> store[(Stockage local<br/>ADR-002)]
@@ -38,6 +39,8 @@ erDiagram
   SIGNAL ||--o| SOURCE : "devient"
   POST ||--o{ MEDIA : "joint"
   POST ||--o{ REVIEW : "reçoit"
+  POST }o--|| POST_TYPE : "est de type"
+  POST ||--o{ FEEDBACK : "reçoit (phase 2)"
   MEDIA }o--|| TEMPLATE : "rendu depuis"
 ```
 
@@ -45,6 +48,8 @@ erDiagram
 | --- | --- | --- |
 | Post | Statut dans le cycle du cahier des charges ; « publié » exige une URL LinkedIn | RM1, RM7 |
 | Source | Une URL ; toute affirmation factuelle du post est rattachée à au moins une source | RM2 |
+| Post (type) | Type pris dans le catalogue du profil ; différent des derniers posts sauf type imposé | RM9 |
+| Feedback | Phase 2 ; n'a aucun effet sur le statut du post | RM11 |
 | Review | Le dernier verdict d'un post « proposé » est « accepté » | RM3 |
 | Profile | Jamais versionné, sauf l'exemple fictif ; contient les noms exclus | RM4, RM8 |
 

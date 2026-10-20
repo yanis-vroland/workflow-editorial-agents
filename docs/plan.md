@@ -22,13 +22,14 @@ Un premier post réel, préparé par l'équipe d'agents à partir d'un profil pr
 | D | F1 Profil | C | `feat/profil` |
 | E | F2 Veille RSS | D | `feat/veille-rss` |
 | F | F3 Archives GitHub | D | `feat/archives-github` |
-| G | F4 Angle | E, F | `feat/angle` |
+| G | F4 Type et angle | E, F | `feat/type-et-angle` |
 | H | F5 Rédaction et critique | G | `feat/redaction-critique` |
 | I | ADR-003 rendu des gabarits, puis F6 Visuel | D | `docs/adr-003-rendu`, `feat/visuel` |
 | J | F7 Interface de validation (charte et maquette de l'interface, puis code) | H, I | `feat/interface-validation` |
 | K | F8 Export | J | `feat/export` |
-| L | Jalon MVP : premier post réel publié et affiché | K | — |
-| M | Phase 2 : F9 à F13, ordre à décider après le MVP | L | — |
+| K2 | F12 Historique des posts | J | `feat/historique` |
+| L | Jalon MVP : premier post réel publié et affiché | K, K2 | — |
+| M | Phase 2 : F14 Panel de relecture en premier, puis F9 à F11, F13 et F15, ordre à décider après le MVP | L | — |
 
 ## Tâches
 
@@ -50,13 +51,14 @@ Un premier post réel, préparé par l'équipe d'agents à partir d'un profil pr
 - [ ] [F1 Profil](cahier-des-charges-fonctionnel.md#fonctionnalités)
 - [ ] [F2 Veille RSS](cahier-des-charges-fonctionnel.md#fonctionnalités)
 - [ ] [F3 Archives GitHub](cahier-des-charges-fonctionnel.md#fonctionnalités)
-- [ ] [F4 Angle](cahier-des-charges-fonctionnel.md#fonctionnalités)
+- [ ] [F4 Type et angle](cahier-des-charges-fonctionnel.md#fonctionnalités)
 - [ ] [F5 Rédaction et critique](cahier-des-charges-fonctionnel.md#fonctionnalités)
 - [ ] ADR à rédiger : ADR-003 rendu des gabarits médias.
 - [ ] [F6 Visuel](cahier-des-charges-fonctionnel.md#fonctionnalités)
 - [ ] Charte et maquette de l'interface de validation (skill `maquette`).
 - [ ] [F7 Interface de validation](cahier-des-charges-fonctionnel.md#fonctionnalités)
 - [ ] [F8 Export](cahier-des-charges-fonctionnel.md#fonctionnalités)
+- [ ] [F12 Historique des posts](cahier-des-charges-fonctionnel.md#fonctionnalités)
 
 ### Lot L : jalon MVP
 

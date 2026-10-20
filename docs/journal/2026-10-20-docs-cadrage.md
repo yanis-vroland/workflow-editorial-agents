@@ -30,3 +30,26 @@ Branche `docs/cadrage`.
 ### Prochaine étape
 
 Yanis valide le cadrage dans la PR. Ensuite : ADR-001 sur l'orchestration des agents.
+
+## 2026-10-20 12:02
+
+### Fait
+
+- Cadrage complété après relecture de Yanis : types de post et variété (RM9, F4 renommée « Type et angle »), projets cités seulement s'ils sont publics ou déclarés publiables (RM10), historique des posts passé en MVP (F12), panel de relecture par personas en phase 2 (F14, RM11), préparation planifiée en phase 2 (F15).
+- Glossaire : Type de post, Historique, Persona, Avis ; une source peut être une entrée du profil (présentation, prestation, projet).
+- Plan : lot K2 (F12) avant le jalon MVP ; F14 en premier lot de la phase 2.
+
+### Décisions
+
+- Préparation à la demande au MVP, automatisation plus tard (Yanis).
+- Historique des posts et variété des types (Yanis).
+- Panel de relecture en phase 2 ; l'éditeur coche les conseils retenus, le Rédacteur réécrit (Yanis).
+- Types de post portés par des fiches du profil plutôt que par un agent par type : proposition de l'agent, à valider par Yanis dans la PR.
+
+### Corrections et limites
+
+- Le MVP grossit d'une fonctionnalité (F12) : à surveiller face à la priorité P2.
+
+### Prochaine étape
+
+Yanis valide le cadrage dans la PR #2. Ensuite : ADR-001 sur l'orchestration des agents.
